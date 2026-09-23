@@ -87,7 +87,123 @@
     text-transform: uppercase;
 }
 
-        .foreword { padding: 60px 5%; max-width: 800px; margin: 0 auto; background-color: #fdfdfd }
+        /* Sektions-Container */
+.foreword-section {
+    padding: 80px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.foreword-section h2 {
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #065465; /* Deine Akzentfarbe */
+}
+
+/* Fließtext-Styling */
+.foreword-body p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #2c2c2c;
+    margin-bottom: 24px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.foreword-body p.lead {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #111;
+}
+
+/* Großzügig gestaltete Zitate */
+.foreword-quote {
+    position: relative;
+    margin: 35px 0 35px 20px;
+    padding: 10px 0 10px 25px;
+    border-left: 3px solid #065465;
+    font-style: italic;
+    font-size: 1.12em;
+    line-height: 1.75;
+    color: #444;
+    background: transparent;
+}
+
+/* Kaufen-Hinweis & Auszeichnungen */
+.foreword-note {
+    background-color: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    padding: 20px 25px;
+    margin: 40px 0 30px 0;
+    font-size: 0.98em;
+    color: #444;
+    line-height: 1.6;
+}
+
+.foreword-note strong {
+    color: #065465;
+}
+
+/* Kuratorin & Kontakt-Block */
+.curator-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.curator-info h4 {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin: 0 0 8px 0;
+}
+
+.curator-info p {
+    margin: 3px 0;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.curator-info a {
+    color: #065465;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.curator-info a:hover {
+    text-decoration: underline;
+}
+
+.artist-link-button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #065465;
+    color: #065465;
+    text-decoration: none;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+}
+
+.artist-link-button:hover {
+    background-color: #065465;
+    color: #fff;
+}
 
         /* Zeilenabstand im Fließtext angepasst (von 1.8 auf 1.5) */
         .intro-text p { text-align: justify; hyphens: auto; line-height: 1.5; margin-bottom: 20px; font-size: 1.1em; }
@@ -269,38 +385,57 @@
     <a href="#unterwegs">Unterwegs</a>
 </nav>
     
-<section id="foreword">
+<section id="foreword" class="foreword-section">
     <h2>Vorwort</h2>
-    <div class="intro-text">
-        <p>
-             Eine langsame Annäherung an die Menschen, die er fotografiert, sind ein Markenzeichen des international ausgezeichneten Dokumentarfotografen Florian Bachmeier. Geduldig beobachtet er, wie die Menschen leben, wie sie mit den Umbrüchen umgehen, die durch Gewalt, Krieg und Migration entstehen. Aber auch ein verlassenes Zimmer, ein Friedhof, eine Landschaft können vom Leben der Menschen erzählen.<br/> 
-Diese Ausstellung führt nach Osteuropa und Südosteuropa, nach Tschechien, Polen, Belarus, Moldau, Georgien, Rumänien, Griechenland, Serbien und in die Ukraine.<br/>
-Für Florian Bachmeier ist der Osten <br/>         
+    
+    <div class="foreword-body">
+        <p class="lead">
+            Eine langsame Annäherung an die Menschen, die er fotografiert, ist das Markenzeichen des international ausgezeichneten Dokumentarfotografen Florian Bachmeier. Geduldig beobachtet er, wie die Menschen leben, wie sie mit den Umbrüchen umgehen, die durch Gewalt, Krieg und Migration entstehen. Aber auch ein verlassenes Zimmer, ein Friedhof, eine Landschaft können vom Leben der Menschen erzählen.
         </p>
-        <blockquote>
-„weniger eine geografische als eine mentale Landschaft. Der Osten entsteht aus Vorstellungen, Ängsten und Bildern, die sich über Jahrhunderte verfestigt haben. Für viele Menschen in Deutschland ist er bis heute ein Raum des Anderen: geprägt von Konflikten, Armut, Korruption, zerfallenden Imperien und einer Geschichte, die nicht vergehen will.“ 
-        </blockquote>
-        <p>
 
-Den Osten begreift Bachmeier dagegen nicht als Gegenwelt zum Westen, 
+        <p>
+            Diese Ausstellung führt nach Osteuropa und Südosteuropa: nach Tschechien, Polen, Belarus, Moldau, Georgien, Rumänien, Griechenland, Serbien und in die Ukraine. Für Florian Bachmeier ist der Osten…
         </p>
-        <blockquote>
-„sondern als Ort, an dem die Verletzlichkeit Europas sichtbar bleibt. Hier sind die Brüche der Geschichte noch lesbar. Gerade deshalb stellen sich hier Fragen, die überall gelten: Was bedeutet Würde? Woraus speist sich Hoffnung? Wie bewahren Menschen ihre Erinnerungen? Und wie richten sie sich immer wieder neu ein in einer sich ständig verändernden Welt?“ 
-        </blockquote>
-        <p>
-Die besondere Kraft der Bilder weist über die Regionen hinaus, in denen sie entstanden sind. Sie werden zu einer Betrachtung menschlicher Grunderfahrungen. <br/>
-Internationale Anerkennung fand die künstlerische und politische Haltung von Florian Bachmeier, als ihn World Press Photo im Frühjahr 2025 mit dem Preis für das beste Einzelfoto in der Kategorie Europa auszeichnete. Auch dieses Bild der sechsjährigen Anhelina ist Teil der Ausstellung. <br/>
-<p></p>
-Alle Bilder können Sie erwerben. Neben dem Gästebuch liegt eine Preisliste aus. </p>
-         <p>  Kuratorin: Mechtild Manus: <br />
-             Telefon: 0151-28818033 <br />
-           Mail:  <a href="mailto:manus_schliersee@posteo.de" target="_blank">manus_schliersee@posteo.de</a> </p>
 
-<p>Mehr Informationen:</p>
-<p> <a href="http://www.florianbachmeier.com" target="_blank">www.florianbachmeier.com</a> </p>
+        <blockquote class="foreword-quote">
+            „…weniger eine geografische als eine mentale Landschaft. Der Osten entsteht aus Vorstellungen, Ängsten und Bildern, die sich über Jahrhunderte verfestigt haben. Für viele Menschen in Deutschland ist er bis heute ein Raum des Anderen: geprägt von Konflikten, Armut, Korruption, zerfallenden Imperien und einer Geschichte, die nicht vergehen will.“
+        </blockquote>
+
+        <p>
+            Den Osten begreift Bachmeier dagegen nicht als Gegenwelt zum Westen,
+        </p>
+
+        <blockquote class="foreword-quote">
+            „…sondern als Ort, an dem die Verletzlichkeit Europas sichtbar bleibt. Hier sind die Brüche der Geschichte noch lesbar. Gerade deshalb stellen sich hier Fragen, die überall gelten: Was bedeutet Würde? Woraus speist sich Hoffnung? Wie bewahren Menschen ihre Erinnerungen? Und wie richten sie sich immer wieder neu ein in einer sich ständig verändernden Welt?“
+        </blockquote>
+
+        <p>
+            Die besondere Kraft der Bilder weist über die Regionen hinaus, in denen sie entstanden sind. Sie werden zu einer Betrachtung menschlicher Grunderfahrungen. Internationale Anerkennung fand die künstlerische und politische Haltung von Florian Bachmeier, als ihn <em>World Press Photo</em> im Frühjahr 2025 mit dem Preis für das beste Einzelfoto in der Kategorie Europa auszeichnete. Auch dieses Bild der sechsjährigen Anhelina ist Teil der Ausstellung.
+        </p>
+
+        <!-- Akzent-Box für Verkaufs-Info -->
+        <div class="foreword-note">
+            <strong>Kunstwerke erwerben:</strong> Alle gezeigten Bilder können erworben werden. Neben dem Gästebuch liegt eine vollständige Preisliste aus.
+        </div>
+
+        <!-- Kuratorin & Website-Link als kompakter Footer des Vorworts -->
+        <div class="curator-card">
+            <div class="curator-info">
+                <h4>Kuratorin</h4>
+                <p><strong>Mechtild Manus</strong></p>
+                <p>Telefon: <a href="tel:015128818033">0151-28818033</a></p>
+                <p>E-Mail: <a href="mailto:manus_schliersee@posteo.de">manus_schliersee@posteo.de</a></p>
+            </div>
+
+            <div>
+                <a href="http://www.florianbachmeier.com" target="_blank" rel="noopener" class="artist-link-button">
+                    Website von Florian Bachmeier &#x2197;
+                </a>
+            </div>
+        </div>
+
     </div>
 </section>
-
 <section id="daheim">
     <h2>Daheim</h2>
     <div class="entry">
