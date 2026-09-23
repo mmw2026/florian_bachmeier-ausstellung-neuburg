@@ -117,34 +117,36 @@
     margin-bottom: 0;
 }
 
-/* Partner & Logo-Bereich */
-.partner-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 25px;
+/* Partner & Veranstalter-Bereich */
+.organizer-wrapper {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0e0e0;
 }
 
-.partner-label {
+.organizer-label {
     font-size: 0.8em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #aaa;
-    margin: 0;
+    letter-spacing: 1.5px;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.partner-logo-link {
+.organizer-logo-link {
     display: inline-block;
-    opacity: 0.85;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.partner-logo-link:hover {
-    opacity: 1;
+.organizer-logo-link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
-.partner-logo-link img {
-    height: 45px; /* Feste, dezent proportionierte Höhe */
+.organizer-logo-link img {
+    /* Höhe deutlich vergrößert (von 45px auf 85px) */
+    height: 85px;
+    max-width: 100%;
     width: auto;
     display: block;
 }
@@ -431,20 +433,21 @@
 
     <div class="header-media">
     
-    <!-- Eleganter Portrait-Block -->
+    <!-- Portrait-Block -->
     <div class="portrait-wrapper">
         <img src="2026_FB_Portrait.jpg" alt="Florian Bachmeier Portrait">
         <p class="portrait-caption">Florian Bachmeier &copy; Ester Neri Hernández Sánchez</p>
     </div>
 
-    <!-- Dezenter Partner- & Logo-Bereich -->
-    <div class="partner-wrapper">
-        <span class="partner-label">In Kooperation mit:</span>
-        <a href="https://brueckenkollektiv.de/" target="_blank" rel="noopener" class="partner-logo-link">
-            <img src="logo-png.png" alt="Brückenkollektiv Logo">
+    <!-- Veranstalter-Bereich mit vergrößertem Logo -->
+    <div class="organizer-wrapper">
+        <div class="organizer-label">Veranstaltet von</div>
+        <a href="https://brueckenkollektiv.de/" target="_blank" rel="noopener" class="organizer-logo-link">
+            <img src="logo-png.png" alt="Brückenkollektiv e.V. Logo">
         </a>
     </div>
 
+</div>
 </div>
 </header>
 
