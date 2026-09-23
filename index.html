@@ -25,6 +25,68 @@
         h3 { font-size: 1.0em; margin-bottom: 5px; }
         .intro-text { font-size: 1.1em; color: #555; }
 
+        /* Container */
+.exhibition-meta {
+    margin: 35px 0 45px 0;
+    max-width: 650px;
+}
+
+.subtitle-text {
+    font-size: 1.15em;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Fließende Beschreibungsliste */
+.meta-list {
+    margin: 0;
+    padding: 0;
+}
+
+.meta-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.meta-item:first-child {
+    border-top: 1px solid #f0f0f0;
+}
+
+.meta-item dt {
+    width: 140px;
+    flex-shrink: 0;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 600;
+    padding-right: 15px;
+}
+
+.meta-item dd {
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Eintritts-Hinweis als dezente Textnote */
+.meta-notice {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 0.85em;
+    color: #065465; /* Deine Akzentfarbe */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
         .foreword { padding: 60px 5%; max-width: 800px; margin: 0 auto; background-color: #fdfdfd }
 
         /* Zeilenabstand im Fließtext angepasst (von 1.8 auf 1.5) */
@@ -57,6 +119,7 @@
         }
         
         footer { padding: 40px 5%; background: #f9f9f9; font-size: 1.0em; }
+
     </style>
 </head>
 <body>
@@ -72,22 +135,35 @@
     <h1 class="artist-title">Florian Bachmeier</h1>
     <h1>Im Osten</h1>
     
-    <div class="intro-text">
+<div class="exhibition-meta">
     <p class="subtitle-text">Fotografien aus neun Ländern 2013–2026</p>
 
-    <div class="info-card">
-        <dl>
+    <dl class="meta-list">
+        <div class="meta-item">
             <dt>Laufzeit</dt>
             <dd>3. Oktober bis 8. November 2026</dd>
+        </div>
 
+        <div class="meta-item">
             <dt>Ort</dt>
-            <dd>Ehemalige Kaserne, THI Campus<br>Donauwörther Straße B 83, Neuburg an der Donau</dd>
+            <dd>
+                Ehemalige Kaserne, THI Campus<br>
+                Donauwörther Straße B 83, Neuburg an der Donau
+            </dd>
+        </div>
 
+        <div class="meta-item">
             <dt>Öffnungszeiten</dt>
-            <dd>Vernissage: 3.10. um 19 Uhr | Finissage: 8.11. um 17 Uhr<br>Samstag und Sonntag 14–18 Uhr</dd>
-        </dl>
+            <dd>
+                <strong>Vernissage:</strong> 3.10. um 19 Uhr<br>
+                <strong>Finissage:</strong> 8.11. um 17 Uhr<br>
+                <strong>Sa & So:</strong> 14:00 – 18:00 Uhr
+            </dd>
+        </div>
+    </dl>
 
-        <span class="badge-tag">Eintritt frei, Spenden willkommen</span>
+    <div class="meta-notice">
+        ✦ Eintritt frei, Spenden willkommen
     </div>
 </div>
 
