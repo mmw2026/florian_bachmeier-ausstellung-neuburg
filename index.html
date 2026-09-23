@@ -6,7 +6,9 @@
     <title>Florian Bachmeier – Im Osten</title>
     <style>
         :root { --main-bg: #ffffff; --text-color: #333; --accent: #888; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        
+        /* Zeilenabstand im Body leicht verringert (von 1.6 auf 1.4) */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4; color: var(--text-color); margin: 0; padding: 0; }
         
         /* Navigation (Sticky like Staatsgalerie) */
         nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); border-bottom: 1px solid #eee; padding: 15px 5%; z-index: 1000; display: flex; overflow-x: auto; }
@@ -14,13 +16,19 @@
         nav a:hover { color: var(--accent); }
 
         header { padding-left: 40px; max-width: 800px; }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        h3 { font-size: 1.0em; margin-bottom: -20px; }
+        
+        /* Größte Überschrift speziell für den Künstlernamen */
+        .artist-title { font-size: 3.2em; font-weight: bold; margin-bottom: 5px; margin-top: 20px; line-height: 1.1; }
+        
+        /* Titel der Ausstellung etwas kleiner als der Künstlername */
+        h1 { font-size: 2.2em; margin-top: 0; margin-bottom: 10px; }
+        h3 { font-size: 1.0em; margin-bottom: 5px; }
         .intro-text { font-size: 1.1em; color: #555; }
 
         .foreword { padding: 60px 5%; max-width: 800px; margin: 0 auto; background-color: #fdfdfd }
 
-        .intro-text p { text-align: justify; hyphens: auto; line-height: 1.8; margin-bottom: 20px; font-size: 1.1em; }
+        /* Zeilenabstand im Fließtext angepasst (von 1.8 auf 1.5) */
+        .intro-text p { text-align: justify; hyphens: auto; line-height: 1.5; margin-bottom: 20px; font-size: 1.1em; }
 
         blockquote { border-left: 3px solid #333; padding-left: 20px; margin: 40px 0; font-style: italic; color: #555; }
 
@@ -29,21 +37,24 @@
 
         .entry { margin-bottom: 80px; max-width: 1000px; }
         .image-placeholder { width: 100%; aspect-ratio: 16/9; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border: 1px dashed #ccc; }
-        .caption { font-style: italic; font-size: 1.0em; color: #666; margin-bottom: 15px; }
+        
+        /* Captions auf normal (nicht mehr kursiv) gesetzt */
+        .caption { font-style: normal; font-size: 1.0em; color: #666; margin-bottom: 15px; }
         .description { font-size: 1.1em; max-width: 700px; }
-.navbar {
-    display: flex;
-    flex-wrap: wrap; /* Erlaubt den Umbruch */
-    justify-content: center; /* Optional: Zentrierung */
-    gap: 10px; /* Optional: Abstand zwischen den Links */
-}
 
-.header_balken_color {
-    background-color: #065465; /* Darkslategray */
-    height: 50px;               /* Höhe des Balkens */
-    width: 100%;                /* Breite */
-    top: 150px;
-}
+        .navbar {
+            display: flex;
+            flex-wrap: wrap; /* Erlaubt den Umbruch */
+            justify-content: center; /* Optional: Zentrierung */
+            gap: 10px; /* Optional: Abstand zwischen den Links */
+        }
+
+        .header_balken_color {
+            background-color: #065465; /* Darkslategray */
+            height: 50px;               /* Höhe des Balkens */
+            width: 100%;                /* Breite */
+            top: 150px;
+        }
         
         footer { padding: 40px 5%; background: #f9f9f9; font-size: 1.0em; }
     </style>
@@ -51,39 +62,45 @@
 <body>
 
 <div class="header_balken_color">
-    <p>
-        
-    </p>
+    <p></p>
 </div>
 
 <header>
     <h3>Digitaler Ausstellungsführer</h3>
+    
+    <!-- Künstlername als größte Überschrift herausgestellt -->
+    <h1 class="artist-title">Florian Bachmeier</h1>
     <h1>Im Osten</h1>
-    <p class="intro-text">
-        <b>Florian Bachmeier</b><br /> 
-        Fotografien aus neun Ländern 2011-2026 </br>
-        <b>Laufzeit</b> <br />
-        3. Oktober bis 8. November 2026 <br />
-        <b>Ort</b> <br />
-        Ehemalige Kaserne, THI Campus, <br/>
-        Donauwörter Straße B 83 <br/>
-        Neuburg an der Donau <br />
-        <b>Öffnungszeiten</b> <br />
-        Vernissage: 3.10. um 19 Uhr, Finissage am 8.11. um 17 Uhr <br/>
-        Samstag und Sonntag 14-18 Uhr <br/>
-        <b>Eintritt frei, Spenden willkommen</b>
-    </p>
-    <p></p>
+    
+    <div class="intro-text">
+        <p>
+            Fotografien aus neun Ländern 2013–2026<br /><br />
+            <b>Laufzeit</b><br />
+            3. Oktober bis 8. November 2026<br /><br />
+            <b>Ort</b><br />
+            Ehemalige Kaserne, THI Campus,<br/>
+            Donauwörter Straße B 83<br/>
+            Neuburg an der Donau<br /><br />
+            <b>Öffnungszeiten</b><br />
+            Vernissage: 3.10. um 19 Uhr, Finissage am 8.11. um 17 Uhr<br/>
+            Samstag und Sonntag 14–18 Uhr<br /><br />
+            <b>Eintritt frei, Spenden willkommen</b>
+        </p>
+    </div>
+
+    <p>
         <img src="2026_FB_Portrait.jpg" alt="Bild Florian Bachmeier" style="width:40%; max-width:1000px; height:auto;"> 
-    &nbsp; &nbsp; <br/>
+        &nbsp; &nbsp; <br/>
         <a href="https://brueckenkollektiv.de/" target="_blank"> 
-        <img src="logo-png.png" alt="Brückenkollektiv" style="width:30%; max-width:1000px; height:auto;"></a> </p>
+            <img src="logo-png.png" alt="Brückenkollektiv" style="width:30%; max-width:1000px; height:auto;">
+        </a>
+    </p>
     <p>FLORIAN BACHMEIER © Ester Neri Hernández Sánchez</p>
 </header>
 
 <nav class="navbar">
     <a href="#foreword">Vorwort</a>
-    <a href="#daheim ">Daheim</a>
+    <a href="#daheim">Daheim</a>
     <a href="#ritual">Ritual</a>
     <a href="#gewalt">Gewalt</a>
     <a href="#unterwegs">Unterwegs</a>
