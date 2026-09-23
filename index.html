@@ -87,6 +87,68 @@
     text-transform: uppercase;
 }
 
+/* Container für den gesamten Bild- & Logo-Bereich */
+.header-media {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Portrait-Karte mit Fotonachweis */
+.portrait-wrapper {
+    max-width: 380px; /* Elegantere, feste Maximalbreite */
+    margin-bottom: 35px;
+}
+
+.portrait-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px; /* Minimal abgerundet für Weichheit */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtiler Schatten */
+}
+
+.portrait-caption {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Partner & Logo-Bereich */
+.partner-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.partner-label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin: 0;
+}
+
+.partner-logo-link {
+    display: inline-block;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.partner-logo-link:hover {
+    opacity: 1;
+}
+
+.partner-logo-link img {
+    height: 45px; /* Feste, dezent proportionierte Höhe */
+    width: auto;
+    display: block;
+}
+
         /* Sektions-Container */
 .foreword-section {
     padding: 80px 5%;
@@ -367,14 +429,23 @@
     </div>
 </div>
 
-    <p>
-        <img src="2026_FB_Portrait.jpg" alt="Bild Florian Bachmeier" style="width:40%; max-width:1000px; height:auto;"> 
-        &nbsp; &nbsp; <br/>
-    <p>FLORIAN BACHMEIER © Ester Neri Hernández Sánchez</p>
-    <a href="https://brueckenkollektiv.de/" target="_blank"> 
-            <img src="logo-png.png" alt="Brückenkollektiv" style="width:30%; max-width:1000px; height:auto;">
+    <div class="header-media">
+    
+    <!-- Eleganter Portrait-Block -->
+    <div class="portrait-wrapper">
+        <img src="2026_FB_Portrait.jpg" alt="Florian Bachmeier Portrait">
+        <p class="portrait-caption">Florian Bachmeier &copy; Ester Neri Hernández Sánchez</p>
+    </div>
+
+    <!-- Dezenter Partner- & Logo-Bereich -->
+    <div class="partner-wrapper">
+        <span class="partner-label">In Kooperation mit:</span>
+        <a href="https://brueckenkollektiv.de/" target="_blank" rel="noopener" class="partner-logo-link">
+            <img src="logo-png.png" alt="Brückenkollektiv Logo">
         </a>
-    </p>
+    </div>
+
+</div>
 </header>
 
 <nav class="navbar">
