@@ -118,7 +118,91 @@
             top: 150px;
         }
         
-        footer { padding: 40px 5%; background: #f9f9f9; font-size: 1.0em; }
+        footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #eaeaea;
+    padding: 60px 5% 40px 5%;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Abschlussbotschaft & Kontakt */
+.footer-thankyou {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-contact {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-contact a {
+    color: #065465;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Metadaten & Credits in Spalten */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.footer-col a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #065465;
+}
+
+/* Unterste Zeile: Sponsoren & Copyright */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.85em;
+    color: #777;
+    gap: 15px;
+}
+
+.footer-sponsors {
+    font-style: normal;
+}
 
     </style>
 </head>
@@ -741,20 +825,44 @@ Mobiltelefon.
 
         
 <footer>
-    <p>Sie sind am Ende der Reise angekommen, zu der Sie Florian Bachmeier mit seinen Bildern eingeladen hat.<p>
+    <div class="footer-content">
+        
+        <!-- Ebene 1: Persönlicher Abschluss -->
+        <div class="footer-contact">
+            <p class="footer-thankyou">
+                Sie sind am Ende der Reise angekommen, zu der Sie Florian Bachmeier mit seinen Bildern eingeladen hat.
+            </p>
+            <p>
+                Gerne können Sie einen Kommentar im Gästebuch hinterlassen oder eine E-Mail senden an:<br>
+                <a href="mailto:manus_schliersee@posteo.de">manus_schliersee@posteo.de</a>
+            </p>
+        </div>
 
-    <p>Gerne können Sie einen Kommentar im Gästebuch hinterlassen oder eine Email schicken an:
-        manus_schliersee@posteo.de</p> 
-    
-    <p>Texte: Florian Bachmeier, Mechtild Manus </p>
-    <p>Gestaltung: Magdalena Waltinger </p>
+        <!-- Ebene 2: Credits & Links -->
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Mitwirkende</h4>
+                <p><strong>Texte:</strong> Florian Bachmeier, Mechtild Manus</p>
+                <p><strong>Gestaltung:</strong> Magdalena Waltinger</p>
+            </div>
 
-    <p>Mehr über Florian Bachmeier: www.florianbachmeier.com</p>
-    
-    <p>© Florian Bachmeier</p>
-    
-<p>Unterstützt von Saal Digital und Farben Griesbeck. 
-</p>
+            <div class="footer-col">
+                <h4>Portfolio & Kontakt</h4>
+                <p>
+                    <a href="https://www.florianbachmeier.com" target="_blank" rel="noopener">
+                        www.florianbachmeier.com &#x2197;
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Ebene 3: Copyright & Sponsoren -->
+        <div class="footer-bottom">
+            <span>&copy; Florian Bachmeier</span>
+            <span class="footer-sponsors">Unterstützt von <strong>Saal Digital</strong> und <strong>Farben Griesbeck</strong></span>
+        </div>
+
+    </div>
 </footer>
 
 </body>
